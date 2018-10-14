@@ -14,17 +14,16 @@ var exec = require('child_process').exec, child;
 
     //let birth = '{ "birthDate":"1993-09-10"}';
     let obj = JSON.parse(stdout);
-    console.log(obj.activeLedColor)
+    console.log("LED RGB Code " + obj.activeLedColor)
 
 
 
-    
+
     var xhttp = new XMLHttpRequest();
     //var ItemJSON;
     //ItemJSON = '[  {    "data": 1,    "ProductID": "1",    "Quantity": 1,  },  {    "Id": 1,    "ProductID": "2",    "Quantity": 2,  }]';
 
-    console.log("Start");
-
+    console.log("Send Colors over REST API");
     xhttp.onreadystatechange = function() {
             if (this.readyState == 1 && this.status == 0 ) {
                 //alert(this.responseText);
