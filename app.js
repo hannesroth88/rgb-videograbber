@@ -1,8 +1,6 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var exec = require('child_process').exec, child;
-secondFunction();
 
-function firstFunction(_callback){
     // do some asynchronous work
     // and when the asynchronous stuff is complete
     child = exec('hyperion-remote -l',
@@ -18,13 +16,8 @@ function firstFunction(_callback){
     let obj = JSON.parse(stdout);
     console.log(obj.activeLedColor)
 
-    _callback();    
-}
 
 
-// call first function and pass in a callback function which
-// first function runs when it has completed
-firstFunction(function() {
     
     var xhttp = new XMLHttpRequest();
     //var ItemJSON;
@@ -43,8 +36,7 @@ firstFunction(function() {
     xhttp.send("100");
     //console.log("responseText " + xhttp.responseText);
     //console.log("status " + xhttp.status);
-    //console.log("readyState " + xhttp.readyState);
-});    
+    //console.log("readyState " + xhttp.readyState);    
 
 
 
