@@ -16,12 +16,20 @@ var exec = require('child_process').exec, child;
         console.log('stderr: ' + stderr);
         if (error !== null) {
              console.log('exec error: ' + error);
-        }        
-        let obj = stdout.slice(stdout.indexOf('{'), stdout.length -1);
-        console.log("whole JSON " + obj);
-        jsonParse = JSON.parse(obj);
-        console.log("activeEffects " + jsonParse.activeEffects);
-        console.log("LED RGB Code " + jsonParse.activeLedColor[2]);
+        }      
+        
+        
+
+
+
+        index_start = stdout.lastIndexOf('"RGB Value" : [ ');
+        index_end = stdout.indexOf("]      }   ],");
+        stdout = stdout.slice(index_start+16,index_end);
+        var array = stdout.split(', ')
+        console.log("LED RGB Code " + array);
+        colorRed = array[0];
+        colorGreen = array[1];
+        colorBlue = array[2];
 
 
         var xhttp = new XMLHttpRequest();
@@ -34,7 +42,7 @@ var exec = require('child_process').exec, child;
         };
         xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
         xhttp.setRequestHeader("Content-type", "text/plain");
-        xhttp.send("100");
+        xhttp.send(colorRed);
 
     });
 
