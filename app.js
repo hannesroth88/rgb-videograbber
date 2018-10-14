@@ -20,12 +20,12 @@ function (error, stdout, stderr) {
     stdout = stdout.slice(0,index_end);
     var arrayRGB = stdout.split(', ');
     console.log("LED RGB Code " + arrayRGB);
-    colorRed = arrayRGB[0]/2.55;
-    colorGreen = arrayRGB[1]/2.55;
-    colorBlue = arrayRGB[2]/2.55;
-    console.log(colorRed.round().toString());
-    console.log(colorGreen.round().toString());
-    console.log(colorBlue.round().toString());
+    colorRed = Math.round(arrayRGB[0]/2.55);
+    colorGreen = Math.round(arrayRGB[1]/2.55);
+    colorBlue = Math.round(arrayRGB[2]/2.55);
+    console.log(colorRed.toString());
+    console.log(colorGreen.toString());
+    console.log(colorBlue.toString());
 
 
 var xhttp = new XMLHttpRequest();
@@ -38,13 +38,13 @@ var xhttp = new XMLHttpRequest();
     };
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", false); // 0-100
     xhttp.setRequestHeader("Content-type", "text/plain");
-    xhttp.send(colorRed.round().toString());
+    xhttp.send(colorRed.toString());
 
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedG/state", false); // 0-100
-    xhttp.send(colorGreen.round().toString());
+    xhttp.send(colorGreen.toString());
 
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", false); // 0-100
-    xhttp.send(colorBlue.round().toString());
+    xhttp.send(colorBlue.toString());
     
 
 });
