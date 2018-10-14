@@ -21,31 +21,31 @@ function firstFunction(_callback){
     _callback();    
 }
 
-function secondFunction(){
-    // call first function and pass in a callback function which
-    // first function runs when it has completed
-    firstFunction(function() {
-        
-        var xhttp = new XMLHttpRequest();
-        //var ItemJSON;
-        //ItemJSON = '[  {    "data": 1,    "ProductID": "1",    "Quantity": 1,  },  {    "Id": 1,    "ProductID": "2",    "Quantity": 2,  }]';
 
-        console.log("Start");
+// call first function and pass in a callback function which
+// first function runs when it has completed
+firstFunction(function() {
+    
+    var xhttp = new XMLHttpRequest();
+    //var ItemJSON;
+    //ItemJSON = '[  {    "data": 1,    "ProductID": "1",    "Quantity": 1,  },  {    "Id": 1,    "ProductID": "2",    "Quantity": 2,  }]';
 
-        xhttp.onreadystatechange = function() {
-                if (this.readyState == 1 && this.status == 0 ) {
-                    //alert(this.responseText);
-                    console.log("success: responseText " + this.responseText);
-                }
-        };
-        xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
-        xhttp.setRequestHeader("Content-type", "text/plain");
-        xhttp.send("100");
-        //console.log("responseText " + xhttp.responseText);
-        //console.log("status " + xhttp.status);
-        //console.log("readyState " + xhttp.readyState);
-    });    
-}
+    console.log("Start");
+
+    xhttp.onreadystatechange = function() {
+            if (this.readyState == 1 && this.status == 0 ) {
+                //alert(this.responseText);
+                console.log("success: responseText " + this.responseText);
+            }
+    };
+    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
+    xhttp.setRequestHeader("Content-type", "text/plain");
+    xhttp.send("100");
+    //console.log("responseText " + xhttp.responseText);
+    //console.log("status " + xhttp.status);
+    //console.log("readyState " + xhttp.readyState);
+});    
+
 
 
 
