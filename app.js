@@ -5,13 +5,16 @@ var exec = require('child_process').exec, child;
 
 child = exec('hyperion-remote -l',
     function (error, stdout, stderr) {
-        console.log('stdout: ' + stdout);
+        //console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
         if (error !== null) {
              console.log('exec error: ' + error);
         }
     });
 
+    //let birth = '{ "birthDate":"1993-09-10"}';
+    let obj = JSON.parse(stdout);
+    console.log(obj.activeLedColor)
 
 var xhttp = new XMLHttpRequest();
 //var ItemJSON;
