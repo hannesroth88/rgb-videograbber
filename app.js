@@ -10,9 +10,10 @@ var exec = require('child_process').exec, child;
         }
     });
 
+    let birth = '{ "activeLedColor":"0, 255, 0"}';
     //let birth = '{ "birthDate":"1993-09-10"}';
-    //let obj = JSON.parse(stdout.JSON);
-    console.log("LED RGB Code " + stdout.activeLedColor)
+    let obj = JSON.parse(birth);
+    console.log("LED RGB Code " + obj.activeLedColor)
 
 
 
