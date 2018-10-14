@@ -1,6 +1,15 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var exec = require('child_process').exec, child;
 
+
+
+
+
+
+
+
+
+
     child = exec('hyperion-remote -l',
     function (error, stdout, stderr) {
         //console.log('stdout: ' + stdout);
@@ -8,8 +17,8 @@ var exec = require('child_process').exec, child;
         if (error !== null) {
              console.log('exec error: ' + error);
         }        
-        let obj = stdout.slice(2, stdout.indexOf('Server info:'))
-        console.log("whole JSON " + obj)
+        let obj = stdout.slice(0, stdout.indexOf('Server info:'))
+        console.log("whole JSON " + obj[1])
         obj = JSON.parse(obj);
         console.log("LED RGB Code " + obj.activeLedColor)
 
