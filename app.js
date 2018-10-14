@@ -1,6 +1,6 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var exec = require('child_process').exec, child;
-firstFunction();
+secondFunction();
 
 function firstFunction(_callback){
     // do some asynchronous work
