@@ -18,11 +18,15 @@ function (error, stdout, stderr) {
     index_end = stdout.indexOf(' ]');
     console.log("index_end " + index_end);
     stdout = stdout.slice(index_start+16,index_end);
-    var array = stdout.split(', ')
-    console.log("LED RGB Code " + array);
-    colorRed = array[0];
-    colorGreen = array[1];
-    colorBlue = array[2];
+    console.log("LED RGB Code Array " + stdout);
+    var arrayRGB = stdout.split(', ')
+    console.log("LED RGB Code " + arrayRGB);
+    colorRed = arrayRGB[0];
+    colorGreen = arrayRGB[1];
+    colorBlue = arrayRGB[2];
+    console.log(colorRed);
+    console.log(colorGreen);
+    console.log(colorBlue);
 
 
     var xhttp = new XMLHttpRequest();
