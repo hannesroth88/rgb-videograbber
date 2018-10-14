@@ -7,19 +7,17 @@ var exec = require('child_process').exec, child;
         console.log('stderr: ' + stderr);
         if (error !== null) {
              console.log('exec error: ' + error);
-        }
+        }        
+        let obj = JSON.parse(stdout);
+        console.log("LED RGB Code " + obj.activeLedColor)
     });
 
-    let birth = '{ "activeLedColor":"0, 255, 0"}';
     //let birth = '{ "birthDate":"1993-09-10"}';
-    let obj = JSON.parse(birth);
-    console.log("LED RGB Code " + obj.activeLedColor)
 
 
 
 
     var xhttp = new XMLHttpRequest();
-
     console.log("Send Colors over REST API");
     xhttp.onreadystatechange = function() {
             if (this.readyState == 1 && this.status == 0 ) {
