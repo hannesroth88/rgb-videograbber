@@ -15,7 +15,7 @@ function (error, stdout, stderr) {
 
     index_start = stdout.lastIndexOf('"RGB Value" : [ ');
     console.log("index_start " + index_start);
-    index_end = stdout.indexOf(" ]");
+    index_end = stdout.indexOf(' ]');
     console.log("index_end " + index_end);
     stdout = stdout.slice(index_start+16,index_end);
     var array = stdout.split(', ')
