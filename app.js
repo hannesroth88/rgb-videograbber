@@ -8,7 +8,7 @@ var exec = require('child_process').exec, child;
         if (error !== null) {
              console.log('exec error: ' + error);
         }        
-        let obj = stdout.slice(1, stdout.indexOf('Server info:'))
+        let obj = stdout.slice(2, stdout.indexOf('Server info:'))
         console.log("whole JSON " + obj)
         obj = JSON.parse(obj);
         console.log("LED RGB Code " + obj.activeLedColor)
