@@ -1,11 +1,11 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
-
 var exec = require('child_process').exec, child;
+start();
 
+function start() {
 child = exec('hyperion-remote -l',
     function (error, stdout, stderr) {
-        //console.log('stdout: ' + stdout);
+        console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
         if (error !== null) {
              console.log('exec error: ' + error);
@@ -34,5 +34,5 @@ xhttp.send("100");
 //console.log("responseText " + xhttp.responseText);
 //console.log("status " + xhttp.status);
 //console.log("readyState " + xhttp.readyState);
-
+}
 
