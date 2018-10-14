@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hannesroth88/rgb-videograbber#readme",
   "dependencies": {
+    "hyperion-js-api": "^1.0.3",
     "shelljs": "^0.8.2",
     "xmlhttprequest": "^1.8.0"
   }

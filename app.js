@@ -2,6 +2,7 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var exec = require('child_process').exec, child;
 
 
+
 child = exec('hyperion-remote -l',
 function (error, stdout, stderr) {
     //console.log('stdout: ' + stdout);
@@ -17,9 +18,9 @@ function (error, stdout, stderr) {
     console.log("index_start " + index_start);
     index_end = stdout.indexOf(' ]');
     console.log("index_end " + index_end);
-    stdout = stdout.slice(index_start+16,index_end);
+    stdout2 = stdout.slice(index_start+16,index_end);
     console.log("LED RGB Code Array " + stdout);
-    var arrayRGB = stdout.split(', ');
+    var arrayRGB = stdout2.split(', ');
     console.log("LED RGB Code " + arrayRGB);
     colorRed = arrayRGB[0];
     colorGreen = arrayRGB[1];
@@ -46,9 +47,4 @@ function (error, stdout, stderr) {
 //console.log("responseText " + xhttp.responseText);
 //console.log("status " + xhttp.status);
 //console.log("readyState " + xhttp.readyState);    
-
-
-
-
-
 
