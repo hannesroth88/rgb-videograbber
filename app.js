@@ -42,7 +42,7 @@ function (error, stdout, stderr) {
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", true); // 0-100
     xhttp.setRequestHeader("Content-type", "text/plain");
     xhttp.send(colorBlue);
-    }
+    
 });
 
 //console.log("responseText " + xhttp.responseText);
