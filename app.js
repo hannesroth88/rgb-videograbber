@@ -16,11 +16,12 @@ function (error, stdout, stderr) {
 
     index_start = stdout.lastIndexOf('"RGB Value" : [ ');
     console.log("index_start " + index_start);
+    stdout = stdout.slice(index_start+16);
     index_end = stdout.indexOf(' ]');
     console.log("index_end " + index_end);
-    stdout2 = stdout.slice(index_start+16,index_end);
+    stdout = stdout.slice(0,index_end);
     console.log("LED RGB Code Array " + stdout);
-    var arrayRGB = stdout2.split(', ');
+    var arrayRGB = stdout.split(', ');
     console.log("LED RGB Code " + arrayRGB);
     colorRed = arrayRGB[0];
     colorGreen = arrayRGB[1];
