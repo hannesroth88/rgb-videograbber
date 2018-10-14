@@ -38,13 +38,13 @@ var xhttp = new XMLHttpRequest();
     };
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", false); // 0-100
     xhttp.setRequestHeader("Content-type", "text/plain");
-    xhttp.send(num.toString(colorRed));
+    xhttp.send(colorRed.round().toString());
 
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedG/state", false); // 0-100
-    xhttp.send(num.toString(colorGreen));
+    xhttp.send(colorGreen.round().toString());
 
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", false); // 0-100
-    xhttp.send(num.toString(colorBlue));
+    xhttp.send(colorBlue.round().toString());
     
 
 });
