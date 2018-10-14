@@ -1,8 +1,6 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var exec = require('child_process').exec, child;
 
-    // do some asynchronous work
-    // and when the asynchronous stuff is complete
     child = exec('hyperion-remote -l',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
@@ -13,15 +11,13 @@ var exec = require('child_process').exec, child;
     });
 
     //let birth = '{ "birthDate":"1993-09-10"}';
-    let obj = JSON.parse(stdout);
-    console.log("LED RGB Code " + obj.activeLedColor)
+    //let obj = JSON.parse(stdout.JSON);
+    console.log("LED RGB Code " + stdout.activeLedColor)
 
 
 
 
     var xhttp = new XMLHttpRequest();
-    //var ItemJSON;
-    //ItemJSON = '[  {    "data": 1,    "ProductID": "1",    "Quantity": 1,  },  {    "Id": 1,    "ProductID": "2",    "Quantity": 2,  }]';
 
     console.log("Send Colors over REST API");
     xhttp.onreadystatechange = function() {
