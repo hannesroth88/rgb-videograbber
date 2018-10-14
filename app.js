@@ -30,22 +30,24 @@ function (error, stdout, stderr) {
 
 var xhttp = new XMLHttpRequest();
 
-    console.log("Send Colors over REST API");
-    xhttp.onreadystatechange = function() {
-            if (this.readyState == 1 && this.status == 0 ) {
-                //alert(this.responseText);
-                console.log("success: responseText " + this.responseText);
-            }
-    };
-    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
-    xhttp.setRequestHeader("Content-type", "text/plain");
-    xhttp.send(colorRed.toString());
+console.log("Send Colors over REST API");
+/*
+xhttp.onreadystatechange = function() {
+        if (this.readyState == 1 && this.status == 0 ) {
+            //alert(this.responseText);
+            console.log("success: responseText " + this.responseText);
+        }
+};
+*/
+xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
+xhttp.setRequestHeader("Content-type", "text/plain");
+xhttp.send(colorRed.toString());
 
-    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedG/state", true); // 0-100
-    xhttp.send(colorGreen.toString());
+xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedG/state", true); // 0-100
+xhttp.send(colorGreen.toString());
 
-    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", true); // 0-100
-    xhttp.send(colorBlue.toString());
+xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", true); // 0-100
+xhttp.send(colorBlue.toString());
     
 
 });

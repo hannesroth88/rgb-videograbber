@@ -1,5 +1,5 @@
 #Pesistent settings file for HyperCon
-#Sat Oct 13 23:41:25 CEST 2018
+#Sun Oct 14 20:45:33 CEST 2018
 ColorConfig.mTransforms[0].mDummy3Label=255
 LedFrameConstruction.topLedCnt=0
 Grabberv4l2Config.mRedSignalThreshold=0.0
@@ -8,7 +8,7 @@ MiscConfig.mEffectPriorityspinner=700
 SshAndColorPickerConfig.username=pi
 DeviceConfig.mColorByteOrder=RGB
 LedFrameConstruction.clockwiseDirection=true
-DeviceConfig.mDeviceProperties={}
+DeviceConfig.mDeviceProperties={output\=/tmp/hyperion.out}
 LedFrameConstruction.topleftCorner=false
 ColorConfig.mTransforms[0].mLedIndexString=*
 ColorConfig.mTransforms[0].mBlueGamma=2.5
@@ -21,7 +21,7 @@ LedFrameConstruction.toprightCorner=false
 MiscConfig.mforwardEnabled=false
 ColorConfig.mTransforms[0].mHSLLuminanceGainAdjustSpinner=1.0
 ColorConfig.mTransforms[0].mDummy1Label=255
-Grabberv4l2Config.mStandard=PAL
+Grabberv4l2Config.mStandard=NTSC
 MiscConfig.mScreensaverOn=true
 Grabberv4l2Config.mCropLeft=0
 SshAndColorPickerConfig.colorPickerShowColorWheel=true
@@ -46,7 +46,7 @@ ColorConfig.mTransforms[0].mRedChannelBlueSpinner=0
 SshAndColorPickerConfig.ipAdress=192.168.0.3
 MiscConfig.mFrameGrabberWidth=64
 MiscConfig.mFrameGrabberHeight=64
-MiscConfig.mFrameGrabberEnabled=true
+MiscConfig.mFrameGrabberEnabled=false
 MiscConfig.mFrameGrabberPriority=890
 MiscConfig.mPathOE=/storage/hyperion/effects
 ImageProcessConfig.mVerticalDepth=1.0
@@ -70,7 +70,7 @@ Grabberv4l2Config.mSizeDecimation=8
 LedFrameConstruction.bottomGapCnt=0
 ColorConfig.mTransforms[0].mHSLSaturationGainAdjustSpinner=1.0
 SshAndColorPickerConfig.sshCommands[3].command=sudo killall hyperionv4l2
-DeviceConfig.mType=none
+DeviceConfig.mType=file
 ColorConfig.mTransforms[0].mRedTemperature=255
 ColorConfig.mTransforms[0].mGreenChannelGreenSpinner=255
 Grabberv4l2Config.mCropTop=0
@@ -92,7 +92,7 @@ ColorConfig.mTransforms[0].mluminanceMinimumSpinner=0.0
 Grabberv4l2Config.mMode=TwoD
 Grabberv4l2Config.mCropBottom=0
 MiscConfig.mBlackbordermCombo=defaultt
-Grabberv4l2Config.mGrabberv4l2Enabled=false
+Grabberv4l2Config.mGrabberv4l2Enabled=true
 MiscConfig.mProtofield="127.0.0.1\:19447"
 MiscConfig.mXbmcCheckerEnabled=false
 Grabberv4l2Config.mWidth=-1
