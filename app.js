@@ -15,20 +15,14 @@ function (error, stdout, stderr) {
 
 
     index_start = stdout.lastIndexOf('"RGB Value" : [ ');
-    console.log("index_start " + index_start);
     stdout = stdout.slice(index_start+16);
     index_end = stdout.indexOf(' ]');
-    console.log("index_end " + index_end);
     stdout = stdout.slice(0,index_end);
-    console.log("LED RGB Code Array " + stdout);
     var arrayRGB = stdout.split(', ');
     console.log("LED RGB Code " + arrayRGB);
     colorRed = arrayRGB[0];
     colorGreen = arrayRGB[1];
     colorBlue = arrayRGB[2];
-    console.log(colorRed);
-    console.log(colorGreen);
-    console.log(colorBlue);
 
 
     var xhttp = new XMLHttpRequest();
@@ -39,9 +33,11 @@ function (error, stdout, stderr) {
                 console.log("success: responseText " + this.responseText);
             }
     };
-    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
     xhttp.setRequestHeader("Content-type", "text/plain");
+    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
     xhttp.send(colorRed);
+    xhttp.send(colorGreen);
+    xhttp.send(colorBlue);
 
 });
 
