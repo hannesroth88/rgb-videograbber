@@ -23,12 +23,13 @@ function (error, stdout, stderr) {
     colorRed = Math.round(arrayRGB[0]/2.55);
     colorGreen = Math.round(arrayRGB[1]/2.55);
     colorBlue = Math.round(arrayRGB[2]/2.55);
-    console.log(colorRed.toString());
-    console.log(colorGreen.toString());
-    console.log(colorBlue.toString());
+    //console.log(colorRed.toString());
+    //console.log(colorGreen.toString());
+    //console.log(colorBlue.toString());
 
 
 var xhttp = new XMLHttpRequest();
+
     console.log("Send Colors over REST API");
     xhttp.onreadystatechange = function() {
             if (this.readyState == 1 && this.status == 0 ) {
@@ -36,14 +37,14 @@ var xhttp = new XMLHttpRequest();
                 console.log("success: responseText " + this.responseText);
             }
     };
-    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", false); // 0-100
+    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
     xhttp.setRequestHeader("Content-type", "text/plain");
     xhttp.send(colorRed.toString());
 
-    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedG/state", false); // 0-100
+    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedG/state", true); // 0-100
     xhttp.send(colorGreen.toString());
 
-    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", false); // 0-100
+    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", true); // 0-100
     xhttp.send(colorBlue.toString());
     
 
