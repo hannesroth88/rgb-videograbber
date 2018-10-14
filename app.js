@@ -23,9 +23,9 @@ function (error, stdout, stderr) {
     colorRed = arrayRGB[0]/2.55;
     colorGreen = arrayRGB[1]/2.55;
     colorBlue = arrayRGB[2]/2.55;
-    console.log(num.toString(colorRed));
-    console.log(num.toString(colorGreen));
-    console.log(num.toString(colorBlue));
+    console.log(colorRed.toString());
+    console.log(colorGreen.toString());
+    console.log(colorBlue.toString());
 
 
 var xhttp = new XMLHttpRequest();
