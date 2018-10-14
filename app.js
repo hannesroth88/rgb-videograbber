@@ -17,12 +17,11 @@ var exec = require('child_process').exec, child;
         if (error !== null) {
              console.log('exec error: ' + error);
         }        
-        let obj = stdout.slice(stdout.indexOf('{'), stdout.length -1)
-        console.log("whole JSON " + obj)
-        obj = JSON.parse(obj);
-        console.log("LED RGB Code " + obj.activeLedColor)
-
-
+        let obj = stdout.slice(stdout.indexOf('{'), stdout.length -1);
+        console.log("whole JSON " + obj);
+        jsonParse = JSON.parse(obj);
+        console.log("activeEffects " + jsonParse.activeEffects);
+        console.log("LED RGB Code " + jsonParse.activeLedColor[3]);
 
 
         var xhttp = new XMLHttpRequest();
