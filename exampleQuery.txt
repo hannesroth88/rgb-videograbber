@@ -1,0 +1,335 @@
+hyperion-remote:
+        version   : V1.03.4 (brindosch-c750c41/dc6a602-1522918225
+        build time: Apr  5 2018 01:57:05
+Connected to localhost:19444
+Get server info
+Server info:
+{
+   "activeEffects" : [],
+   "activeLedColor" : [
+      {
+         "HEX Value" : [ "0x00FF00" ],
+         "HSL Value" : [ 120, 1.0, 0.50 ],
+         "RGB Value" : [ 0, 255, 0 ]
+      }
+   ],
+   "adjustment" : [
+      {
+         "blueAdjust" : [ 0, 0, 255 ],
+         "greenAdjust" : [ 0, 255, 0 ],
+         "id" : "default",
+         "redAdjust" : [ 255, 0, 0 ]
+      }
+   ],
+   "correction" : [
+      {
+         "correctionValues" : [ 255, 255, 255 ],
+         "id" : "default"
+      }
+   ],
+   "effects" : [
+      {
+         "args" : {
+            "color-end" : [ 238, 173, 47 ],
+            "color-start" : [ 136, 97, 7 ],
+            "fade-time" : 5.0
+         },
+         "name" : "Cinema brighten lights",
+         "script" : "/usr/share/hyperion/effects/fade.py"
+      },
+      {
+         "args" : {
+            "color-end" : [ 136, 97, 7 ],
+            "color-start" : [ 238, 173, 47 ],
+            "fade-time" : 5.0
+         },
+         "name" : "Cinema dim lights",
+         "script" : "/usr/share/hyperion/effects/fade.py"
+      },
+      {
+         "args" : {
+            "color" : [ 255, 0, 0 ],
+            "fadeFactor" : 0.70,
+            "speed" : 1.0
+         },
+         "name" : "Knight rider",
+         "script" : "/usr/share/hyperion/effects/knight-rider.py"
+      },
+      {
+         "args" : {
+            "blobs" : 5,
+            "color" : [ 0, 0, 255 ],
+            "hueChange" : 60.0,
+            "reverse" : false,
+            "rotationTime" : 60.0
+         },
+         "name" : "Blue mood blobs",
+         "script" : "/usr/share/hyperion/effects/mood-blobs.py"
+      },
+      {
+         "args" : {
+            "baseChange" : true,
+            "baseColorChangeRate" : 2.0,
+            "baseColorRangeLeft" : 160,
+            "baseColorRangeRight" : 320,
+            "blobs" : 5,
+            "color" : [ 0, 0, 255 ],
+            "hueChange" : 30.0,
+            "reverse" : false,
+            "rotationTime" : 60.0
+         },
+         "name" : "Cold mood blobs",
+         "script" : "/usr/share/hyperion/effects/mood-blobs.py"
+      },
+      {
+         "args" : {
+            "baseChange" : true,
+            "baseColorChangeRate" : 0.20,
+            "baseColorRangeLeft" : 0,
+            "baseColorRangeRight" : 360,
+            "blobs" : 5,
+            "colorRandom" : true,
+            "hueChange" : 30.0,
+            "reverse" : false,
+            "rotationTime" : 60.0
+         },
+         "name" : "Full color mood blobs",
+         "script" : "/usr/share/hyperion/effects/mood-blobs.py"
+      },
+      {
+         "args" : {
+            "blobs" : 5,
+            "color" : [ 0, 255, 0 ],
+            "hueChange" : 60.0,
+            "reverse" : false,
+            "rotationTime" : 60.0
+         },
+         "name" : "Green mood blobs",
+         "script" : "/usr/share/hyperion/effects/mood-blobs.py"
+      },
+      {
+         "args" : {
+            "blobs" : 5,
+            "color" : [ 255, 0, 0 ],
+            "hueChange" : 60.0,
+            "reverse" : false,
+            "rotationTime" : 60.0
+         },
+         "name" : "Red mood blobs",
+         "script" : "/usr/share/hyperion/effects/mood-blobs.py"
+      },
+      {
+         "args" : {
+            "baseChange" : true,
+            "baseColorChangeRate" : 2.0,
+            "baseColorRangeLeft" : 333,
+            "baseColorRangeRight" : 151,
+            "blobs" : 5,
+            "color" : [ 255, 0, 0 ],
+            "hueChange" : 30.0,
+            "reverse" : false,
+            "rotationTime" : 60.0
+         },
+         "name" : "Warm mood blobs",
+         "script" : "/usr/share/hyperion/effects/mood-blobs.py"
+      },
+      {
+         "args" : {
+            "color_one" : [ 255, 0, 0 ],
+            "color_two" : [ 0, 0, 255 ],
+            "colors_count" : 10,
+            "reverse" : false,
+            "rotation-time" : 1.50
+         },
+         "name" : "Police Lights Single",
+         "script" : "/usr/share/hyperion/effects/police.py"
+      },
+      {
+         "args" : {
+            "color_one" : [ 255, 0, 0 ],
+            "color_two" : [ 0, 0, 255 ],
+            "reverse" : false,
+            "rotation-time" : 1.0
+         },
+         "name" : "Police Lights Solid",
+         "script" : "/usr/share/hyperion/effects/police.py"
+      },
+      {
+         "args" : {
+            "brightness" : 1.0,
+            "reverse" : false,
+            "rotation-time" : 60.0
+         },
+         "name" : "Rainbow mood",
+         "script" : "/usr/share/hyperion/effects/rainbow-mood.py"
+      },
+      {
+         "args" : {
+            "brightness" : 1.0,
+            "reverse" : false,
+            "rotation-time" : 3.0
+         },
+         "name" : "Rainbow swirl fast",
+         "script" : "/usr/share/hyperion/effects/rainbow-swirl.py"
+      },
+      {
+         "args" : {
+            "brightness" : 1.0,
+            "reverse" : false,
+            "rotation-time" : 20.0
+         },
+         "name" : "Rainbow swirl",
+         "script" : "/usr/share/hyperion/effects/rainbow-swirl.py"
+      },
+      {
+         "args" : {
+            "saturation" : 1.0,
+            "speed" : 1.0
+         },
+         "name" : "Random",
+         "script" : "/usr/share/hyperion/effects/random.py"
+      },
+      {
+         "args" : {
+            "colorLevel" : 230,
+            "speed" : 1.50,
+            "whiteLevel" : 100
+         },
+         "name" : "Running dots",
+         "script" : "/usr/share/hyperion/effects/running_dots.py"
+      },
+      {
+         "args" : {
+            "alarm-color" : [ 255, 0, 0 ],
+            "post-color" : [ 255, 174, 11 ],
+            "shutdown-enabled" : false,
+            "speed" : 1.20
+         },
+         "name" : "System Shutdown",
+         "script" : "/usr/share/hyperion/effects/shutdown.py"
+      },
+      {
+         "args" : {
+            "color" : [ 255, 0, 0 ],
+            "percentage" : 10,
+            "rotation-time" : 12.0
+         },
+         "name" : "Snake",
+         "script" : "/usr/share/hyperion/effects/snake.py"
+      },
+      {
+         "args" : {
+            "brightness" : 1.0,
+            "color" : [ 255, 255, 255 ],
+            "random-color" : true,
+            "reverse" : false,
+            "rotation-time" : 3.0,
+            "saturation" : 1.0,
+            "sleep-time" : 0.050
+         },
+         "name" : "Sparks Color",
+         "script" : "/usr/share/hyperion/effects/sparks.py"
+      },
+      {
+         "args" : {
+            "brightness" : 1.0,
+            "color" : [ 255, 255, 255 ],
+            "random-color" : false,
+            "reverse" : false,
+            "rotation-time" : 3.0,
+            "saturation" : 1.0,
+            "sleep-time" : 0.050
+         },
+         "name" : "Sparks",
+         "script" : "/usr/share/hyperion/effects/sparks.py"
+      },
+      {
+         "args" : {
+            "color" : [ 0, 0, 255 ],
+            "frequency" : 10.0
+         },
+         "name" : "Strobe blue",
+         "script" : "/usr/share/hyperion/effects/strobe.py"
+      },
+      {
+         "args" : {
+            "color" : [ 188, 17, 66 ],
+            "frequency" : 10.0
+         },
+         "name" : "Strobe Raspbmc",
+         "script" : "/usr/share/hyperion/effects/strobe.py"
+      },
+      {
+         "args" : {
+            "color" : [ 255, 255, 255 ],
+            "frequency" : 10.0
+         },
+         "name" : "Strobe white",
+         "script" : "/usr/share/hyperion/effects/strobe.py"
+      },
+      {
+         "args" : {
+            "speed" : 1.0
+         },
+         "name" : "Color traces",
+         "script" : "/usr/share/hyperion/effects/traces.py"
+      },
+      {
+         "args" : {
+            "ListenIP" : "239.255.28.01",
+            "ListenPort" : 2801
+         },
+         "name" : "UDP multicast listener",
+         "script" : "/usr/share/hyperion/effects/udp.py"
+      },
+      {
+         "args" : {
+            "ListenPort" : 2391
+         },
+         "name" : "UDP listener",
+         "script" : "/usr/share/hyperion/effects/udp.py"
+      },
+      {
+         "args" : {
+            "sleepTime" : 0.750
+         },
+         "name" : "X-Mas",
+         "script" : "/usr/share/hyperion/effects/x-mas.py"
+      }
+   ],
+   "hostname" : "raspberrypi",
+   "hyperion_build" : [
+      {
+         "time" : "Apr  5 2018 01:57:21",
+         "version" : "V1.03.4 (brindosch-c750c41/dc6a602-1522918225"
+      }
+   ],
+   "priorities" : [
+      {
+         "priority" : 100
+      },
+      {
+         "priority" : 990
+      }
+   ],
+   "temperature" : [
+      {
+         "correctionValues" : [ 255, 255, 255 ],
+         "id" : "default"
+      }
+   ],
+   "transform" : [
+      {
+         "blacklevel" : [ 0.0, 0.0, 0.0 ],
+         "gamma" : [ 2.50, 2.50, 2.50 ],
+         "id" : "default",
+         "luminanceGain" : 1.0,
+         "luminanceMinimum" : 0.0,
+         "saturationGain" : 1.0,
+         "saturationLGain" : 1.0,
+         "threshold" : [ 0.0, 0.0, 0.0 ],
+         "valueGain" : 1.0,
+         "whitelevel" : [ 1.0, 1.0, 1.0 ]
+      }
+   ]
+}
