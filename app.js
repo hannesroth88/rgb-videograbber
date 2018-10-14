@@ -21,7 +21,7 @@ var exec = require('child_process').exec, child;
         console.log("whole JSON " + obj);
         jsonParse = JSON.parse(obj);
         console.log("activeEffects " + jsonParse.activeEffects);
-        console.log("LED RGB Code " + jsonParse.activeLedColor[3]);
+        console.log("LED RGB Code " + jsonParse.activeLedColor[2]);
 
 
         var xhttp = new XMLHttpRequest();
