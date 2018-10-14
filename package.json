@@ -1,0 +1,19 @@
+{
+  "name": "rgb-videograbber",
+  "version": "1.0.0",
+  "description": "Hyperion",
+  "main": "app.js",
+  "scripts": {
+    "test": "console.out(\"Test\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannesroth88/rgb-videograbber.git"
+  },
+  "author": "Hannes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hannesroth88/rgb-videograbber/issues"
+  },
+  "homepage": "https://github.com/hannesroth88/rgb-videograbber#readme"
+}
