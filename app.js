@@ -17,9 +17,9 @@ function (error, stdout, stderr) {
     console.log("index_start " + index_start);
     index_end = stdout.indexOf(' ]');
     console.log("index_end " + index_end);
-    stdout = stdout.slice(index_start+16,index_end);
-    console.log("LED RGB Code Array " + stdout);
-    var arrayRGB = stdout.split(', ')
+    stdout2 = stdout.slice(parseInt(index_start)+16,(parseInt(index_end)));
+    console.log("LED RGB Code Array " + stdout2);
+    var arrayRGB = stdout2.split(', ')
     console.log("LED RGB Code " + arrayRGB);
     colorRed = arrayRGB[0];
     colorGreen = arrayRGB[1];
