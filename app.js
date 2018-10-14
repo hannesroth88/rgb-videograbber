@@ -23,7 +23,9 @@ function (error, stdout, stderr) {
     colorRed = arrayRGB[0]/2.55;
     colorGreen = arrayRGB[1]/2.55;
     colorBlue = arrayRGB[2]/2.55;
-
+    console.log(num.toString(colorRed));
+    console.log(num.toString(colorGreen));
+    console.log(num.toString(colorBlue));
 
 
 var xhttp = new XMLHttpRequest();
@@ -36,13 +38,13 @@ var xhttp = new XMLHttpRequest();
     };
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", false); // 0-100
     xhttp.setRequestHeader("Content-type", "text/plain");
-    xhttp.send(colorRed);
+    xhttp.send(num.toString(colorRed));
 
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedG/state", false); // 0-100
-    xhttp.send(colorGreen);
+    xhttp.send(num.toString(colorGreen));
 
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", false); // 0-100
-    xhttp.send(colorBlue);
+    xhttp.send(num.toString(colorBlue));
     
 
 });
