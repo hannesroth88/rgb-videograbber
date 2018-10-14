@@ -33,12 +33,16 @@ function (error, stdout, stderr) {
                 console.log("success: responseText " + this.responseText);
             }
     };
-    xhttp.setRequestHeader("Content-type", "text/plain");
     xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedR/state", true); // 0-100
+    xhttp.setRequestHeader("Content-type", "text/plain");
     xhttp.send(colorRed);
+    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedG/state", true); // 0-100
+    xhttp.setRequestHeader("Content-type", "text/plain");
     xhttp.send(colorGreen);
+    xhttp.open("PUT", "http://192.168.2.4:8080/rest/items/EG_Wohnen_LedB/state", true); // 0-100
+    xhttp.setRequestHeader("Content-type", "text/plain");
     xhttp.send(colorBlue);
-
+    }
 });
 
 //console.log("responseText " + xhttp.responseText);
